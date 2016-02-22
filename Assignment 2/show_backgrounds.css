@@ -1,0 +1,68 @@
+
+
+html {
+    background-color: #888;
+}
+
+
+div.holder {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: #888;
+    border-style: solid;
+    padding: 10px;
+    font-size: x-large;
+}
+
+
+.colorA {
+    color: #4581cf;
+
+}
+
+.colorB {
+    color:  #B7E2FF;
+}
+
+
+.colorC {
+    color: #fff8b2;
+}
+
+.colorD {
+    color:  #b25c1f;
+}
+
+.colorE {
+    color:  #572a0a;
+}
+
+
+
+
+.backgroundA {
+    background-color: #4581cf;
+
+}
+
+.backgroundB {
+    background-color:  #B7E2FF;
+}
+
+
+.backgroundC {
+    background-color: #fff8b2;
+}
+
+.backgroundD {
+    background-color:  #b25c1f;
+}
+
+.backgroundE {
+    background-color:  #572a0a;
+}
+
+button {
+    font-size: xx-large;
+}

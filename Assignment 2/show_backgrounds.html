@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Backgrounds</title>
+
+    <!--Backgrounds-->
+    <link rel="stylesheet" type="text/css" href="show_backgrounds.css"/>
+
+</head>
+<body>
+
+<div class="holder">
+    <div id="background" class="backgroundC">
+        <div id="foreground" class="colorE">
+            <h1>Dhruval Darji - Basic Themes</h1>
+            <p>
+                Lorem ipsum dolor sit amet, mauris quam, felis sed, eros quis neque ut odio, blandit non mollis egestas
+                elit
+                velit posuere. Non odio egestas donec a odio wisi. Luctus consectetuer est nulla, pulvinar urna dolor
+                egestas, accusamus ut, tortor nullam potenti suscipit. Maecenas auctor mauris, nullam dictum non
+                accumsan,
+                ultrices cursus tincidunt, vestibulum fusce nascetur id mauris. Vel id ante netus aliquam quam in,
+                mattis
+                vehicula nullam. Sint sit elit, risus eget suscipit pede non, mauris libero etiam non, ornare a magna
+                nam.
+            </p>
+            <p>
+                Sed voluptate a. Tortor sollicitudin lacus vehicula turpis, ante aliquam, placerat id, purus venenatis.
+                Laoreet elementum reprehenderit eget donec donec dictum, urna eros scelerisque, nunc faucibus, et tempus
+                nibh, diam volutpat euismod odio eros. Ac morbi imperdiet. Dictum gravida molestie amet sapien malesuada
+                donec. Consectetuer a vel per pellentesque curabitur, ullamcorper porta in est in, dolorem eveniet
+                vulputate
+                curabitur donec, ut morbi maecenas quisque vivamus amet wisi. Eu urna gravida sed lorem, lorem amet a,
+                convallis molestie euismod nunc, pede a, non sed non ad mauris maecenas rhoncus.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="holder">
+    <table>
+        <tr>
+            <td>
+                Foreground:
+            </td>
+            <td>
+                <button class="colorA" onclick="changeForeground(this)">A</button>
+            </td>
+            <td>
+                <button class="colorB" onclick="changeForeground(this)">B</button>
+            </td>
+            <td>
+                <button class="colorC" onclick="changeForeground(this)">C</button>
+            </td>
+            <td>
+                <button class="colorD" onclick="changeForeground(this)">D</button>
+            </td>
+            <td>
+                <button class="colorE" onclick="changeForeground(this)">E</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Background:
+            </td>
+            <td>
+                <button class="backgroundA" onclick="changeBackground(this)">A</button>
+            </td>
+            <td>
+                <button class="backgroundB" onclick="changeBackground(this)">B</button>
+            </td>
+            <td>
+                <button class="backgroundC" onclick="changeBackground(this)">C</button>
+            </td>
+            <td>
+                <button class="backgroundD" onclick="changeBackground(this)">D</button>
+            </td>
+            <td>
+                <button class="backgroundE" onclick="changeBackground(this)">E</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- Our Theme Script-->
+<script>
+    var foreground = document.getElementById('foreground');
+    var background = document.getElementById('background');
+
+    var changeForeground = function (elem) {
+        foreground.className = elem.className;
+    };
+
+    var changeBackground = function (elem) {
+        background.className = elem.className;
+    };
+</script>
+
+</body>
+</html>

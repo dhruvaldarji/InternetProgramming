@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IP - Assignment 3</title>
+
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Dhruval Darji">
+	<meta name="description" content="Internet Programming - Assignment 3">
+	<meta name="robots" content="all">
+</head>
+<body>
+<div class="page-wrapper">
+
+	<section class="intro">
+		<header role="banner">
+			<h1 class="float-left">Internet Programming</h1>
+            <h3 class="float-right">Dhruval Darji</h3>
+		</header>
+        <hr/>
+		<div class="preamble" role="article">
+            <h2>Assignment 3</h2>
+            <div>
+                This page is a pure Javascript application that allows the user to enter strings into a variable number of input widgets.
+                As a string is entered by the user, its length is automatically displayed next to the input widget.
+                Buttons are provided to control the interface and to provide some functionality.
+                <ul>
+                    <li>Clicking one button will add another input widget</li>
+                    <li>Clicking another button will remove an input widget, always leaving at least one input widget.</li>
+                    <li>Clicking anther button will cause the visible strings to be sorted</li>
+                </ul>
+                As a convenience to the user, the application will remember the string entered into a widget even after the widget is removed.
+                If the widget is added back again, then the saved value will be displayed in the widget.
+                But, be careful, the saved strings do not participate in a sort operation if not visible.
+            </div>
+		</div>
+	</section>
+
+    <br/><hr/><br/>
+
+	<fieldset class="main center" role="main">
+        <div class="control text-center">
+            <button class="btn btn-green" onclick="addItem()">Add</button>
+            <button class="btn btn-blue" onclick="sortList()">Sort</button>
+            <hr/>
+        </div>
+
+        <div id="list" class="text-center list">
+            <!--Dynamic List-->
+        </div>
+
+         <div class="control text-center">
+             <hr/>
+            <button class="btn btn-green" onclick="addItem()">Add</button>
+            <button class="btn btn-blue" onclick="sortList()">Sort</button>
+        </div>
+	</fieldset>
+
+
+</div>
+
+<script src="scripts/main.js" rel="script" type="text/javascript"></script>
+</body>
+</html>

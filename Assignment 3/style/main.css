@@ -1,0 +1,248 @@
+/* basic elements */
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 75% georgia, sans-serif;
+    line-height: 1.88889;
+    color: #555753;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font: italic normal 1.4em georgia, sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    color: #7D775C;
+}
+
+.btn {
+    border: none;
+    padding: 8px 20px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+    background-color: #e7e7e7;
+    color: black;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-green {
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-blue {
+    border: 2px solid #008CBA;
+    background-color: #008CBA;
+    color: white;
+}
+
+.btn-red {
+    border: 2px solid #f44336;
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-gray {
+    border: 2px solid #e7e7e7;
+    background-color: #e7e7e7;
+    color: black;
+}
+
+.btn-black {
+    border: 2px solid #555555;
+    background-color: #555555;
+    color: white;
+}
+
+.border {
+    border: 2px solid #ccc !important;
+    border-radius: 2px;
+}
+
+.input {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #808080;
+    width: 100%
+}
+
+.half {
+    width: 50%;
+}
+
+.full {
+    width: 100%;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a:link, footer a:visited {
+    margin-right: 20px;
+}
+
+.font1 {
+    font-size: 10px;
+}
+
+.font2 {
+    font-size: 12px;
+}
+
+.font3 {
+    font-size: 16px;
+}
+
+.font4 {
+    font-size: 20px;
+}
+
+.font5 {
+    font-size: 24px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.center {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* specific divs */
+.page-wrapper {
+    padding: 0 175px 0 175px;
+    margin: 0;
+    position: relative;
+}
+
+.intro {
+    width: 100%;
+}
+
+header {
+    padding-top: 20px;
+    height: 50px;
+}
+
+header h1 {
+    margin-top: 10px;
+    display: block;
+    width: 220px;
+    height: 25px;
+}
+
+header h2 {
+    margin-top: 10px;
+    display: block;
+    width: 220px;
+    height: 25px;
+}
+
+.preamble {
+    clear: right;
+    padding: 0px 10px 0 10px;
+}
+
+.main {
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+fieldset {
+    border: none;
+}
+
+.control {
+
+}
+
+.control span {
+    padding: 10px;
+}
+
+.list {
+    padding: 0px;
+}
+
+.list ul {
+    list-style: none;
+    -webkit-padding-start: 0px;
+}
+
+.list-item {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    width: 75%;
+}
+
+.list-item input {
+    padding-left: 20px;
+    width: 50%;
+}
+
+.list-item .input-size {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 25%;
+}
+
+.list-item .input-delete {
+    padding-right: 20px;
+    width: 25%;
+}
+
+.hidden {
+    visibility: hidden;
+}
