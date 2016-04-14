@@ -1,0 +1,26 @@
+h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+hr {
+    border-top: 1px solid #ccc;
+}
+
+table {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 5px #ccc;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+tr:hover {
+    background-color: #eee
+}

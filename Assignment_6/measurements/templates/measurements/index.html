@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Measurements</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'measurements/main.css' %}">
+</head>
+<body>
+<h1>List of Areas</h1>
+<hr/>
+<div>
+    {% if area_list %}
+        <table>
+            <thead>
+            <tr>
+                <th class="id">ID</th>
+                <th class="name">Name</th>
+                <th class="num_locations">Number of Locations</th>
+                <th class="avg_measurements">Average Measurement</th>
+                <th class="categories">Categories</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for area in area_list %}
+                <tr>
+                    <td>{{ area.id }}</td>
+                    <td>{{ area.name }}</td>
+                    <td>{{ area.number_of_locations }}</td>
+                    <td>{{ area.average_measurement }}</td>
+                    <td>{{ area.category_names }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h3>Sorry, could not retrieve Areas.</h3>
+    {% endif %}
+</div>
+</body>
+</html>

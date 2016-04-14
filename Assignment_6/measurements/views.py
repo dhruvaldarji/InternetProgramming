@@ -1,8 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
-from django.http import HttpResponse
+from .models import Area
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the measurements index.")
+    area_list = Area.objects.order_by('id')
+    context = {'area_list': area_list}
+    return render(request, 'measurements/index.html', context)

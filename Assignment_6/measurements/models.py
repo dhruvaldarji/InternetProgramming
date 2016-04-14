@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models, connection
 
 
 class Area(models.Model):
@@ -12,7 +12,11 @@ class Area(models.Model):
         Returns the number of locations for this area.
         :return: num_locations
         """
-        return self
+        c = connection.cursor()
+        c.execute('SELECT COUNT(*) FROM measurements_location WHERE area_id = %s;', [self.id])
+        num_locations = c.fetchone()[0]
+
+        return num_locations
 
     def average_measurement(self):
         """
@@ -20,7 +24,14 @@ class Area(models.Model):
         If the area has no measurements then return None.
         :return: average
         """
-        return self
+        c = connection.cursor()
+        c.execute('SELECT ROUND(AVG(value), 3) FROM measurements_measurement ' +
+                  'INNER JOIN measurements_location ON measurements_location.id = measurements_measurement.location_id ' +
+                  'INNER JOIN measurements_area ON measurements_area.id = measurements_location.area_id ' +
+                  'WHERE measurements_area.id = %s;', [self.id])
+        average = c.fetchone()[0]
+
+        return average
 
     def category_names(self):
         """
@@ -29,7 +40,23 @@ class Area(models.Model):
         If the area belongs to no categories, return the empty string.
         :return: names
         """
-        return self
+        cats = ""
+        c = connection.cursor()
+        c.execute('SELECT * FROM measurements_category ' +
+                  'INNER JOIN measurements_category_members ON measurements_category_members.category_id = measurements_category.id ' +
+                  'INNER JOIN measurements_area ON measurements_area.id = measurements_category_members.area_id ' +
+                  'WHERE measurements_area.id = %s;', [self.id])
+        rows = c.fetchall()
+
+        category_names = []
+        for row in rows:
+            category_names.append(row[1])
+
+        cats = ', '.join(category_names)
+        if cats == '':
+            return 'None'
+        else:
+            return cats
 
     def __str__(self):
         return self.name
@@ -43,7 +70,7 @@ class Location(models.Model):
 
     # Area:Location
     def __str__(self):
-        return self.name
+        return self.area.__str__() + ":" + self.name
 
 
 class Measurement(models.Model):
@@ -54,7 +81,7 @@ class Measurement(models.Model):
 
     # Measurement@Area:Location
     def __str__(self):
-        return self.name
+        return "Measurement@" + self.location.__str__()
 
 
 class Category(models.Model):

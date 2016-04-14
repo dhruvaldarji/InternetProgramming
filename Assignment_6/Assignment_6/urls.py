@@ -19,7 +19,7 @@ from django.contrib import admin
 from measurements import views
 
 urlpatterns = [
-    url(r'^$', include('measurements.urls')),
+    url(r'', include('measurements.urls')),
     url(r'^measurements/', include('measurements.urls')),
     url(r'^admin/', admin.site.urls),
 ]
